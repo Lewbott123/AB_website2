@@ -216,9 +216,7 @@ footer {
     height: auto;
   }
 
-  .hero-bg {
-    display: none; /* removes background version */
-  }
+
 
   .hero-img-mobile {
     display: block;
