@@ -197,11 +197,13 @@ footer {
 @media (max-width: 768px) {
 
   .hero {
-    background-position: center top;
+    display: flex;
+    flex-direction: column;
+    height: auto;
   }
 
   .hero-bg {
-    display: none;
+    display: none; /* removes background version */
   }
 
   .hero-img-mobile {
@@ -209,42 +211,36 @@ footer {
     width: 100%;
     height: auto;
   }
-  
-.hero-content {
-  padding: 30px 20px;
-}
+
+  .hero-content {
+    position: relative;   /* IMPORTANT: kills absolute layout */
+    top: auto;
+    left: auto;
+    transform: none;
+    padding: 25px 20px;
+    text-align: left;
+  }
 
   .hero h2 {
     font-size: 28px;
-    line-height: 1.2;
+    margin-bottom: 10px;
   }
 
   .hero p {
     font-size: 16px;
+    margin-bottom: 20px;
   }
 
   .hero-buttons {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .btn-primary
+  .btn-primary,
   .btn-secondary {
-    display: block;
     width: 100%;
-    margin-bottom: 10px;
     text-align: center;
-  }
-
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  nav {
-    display: none; /* optional: later replace with hamburger */
   }
 }
 
