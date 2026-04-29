@@ -213,6 +213,7 @@ footer {
   }
 
   .hero-content {
+    margin-top: 20px;
     position: relative;   /* IMPORTANT: kills absolute layout */
     top: auto;
     left: auto;
@@ -232,6 +233,7 @@ footer {
   }
 
   .hero-buttons {
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     gap: 10px;
