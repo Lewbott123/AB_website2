@@ -284,15 +284,22 @@ footer {
 
   nav {
     position: absolute;
-    top: 70px;
+    top: 100%;
     left: 0;
     width: 100%;
     background: #111;
-    display: none;
+
     flex-direction: column;
     text-align: center;
-    padding: 20px 0;
-    transition: all 0.3s ease;
+    padding: 15px 0;
+
+    /* hidden state */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    pointer-events: none;
+
+    transition: all 0.25s ease;
   }
 
   nav a {
@@ -302,7 +309,10 @@ footer {
   }
 
   nav.active {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 }
 
