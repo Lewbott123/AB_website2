@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Services - A.B Vehicle Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<style>
+  .service-card {
+            position: relative;
+        }
+
+/* header stays normal */
+        .card-header {
+            cursor: pointer;
+        }
+
+/* content becomes overlay inside card */
+        .card-content {
+            position: relative;
+            max-height: 0;
+            overflow: hidden;
+
+            opacity: 0;
+            transform: translateY(-8px);
+
+            transition: 
+                max-height 0.4s ease,
+                opacity 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .service-card.active .card-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dropdown-icon {
+            font-size: 36px;
+            transition: transform 0.3s ease;
+        }
+
+        /* rotate when open */
+        .service-card.active .dropdown-icon {
+            transform: rotate(180deg);
+        }
+
+        .expand-hint {
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.6;
+            margin-bottom: 25px;
+            letter-spacing: 0.2px;
+        }
+</style>
+<body>
+
+<header>
+  <div class="nav-container">
+        
+    <div class="logo">
+        <img src="ABlogo.png" alt="A.B Vehicle Services Logo" class="logo-img">
+        <span class="logo-text">A.B Vehicle Services</span>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero small-hero">
+  <div class="hero-bg services-bg"></div>
+
+  <div class="hero-content fade-in">
+    <h2>Our Services</h2>
+    <p>Professional vehicle care, repairs and diagnostics you can rely on.</p>
+  </div>
+</section>
+
+
+
+<section class="section alt">
+  <div class="container">
+    <div class="services-grid">
+        <p class="expand-hint">Click any section below to view more details ↓</p>
+    </div>
+    <div class="services-grid">
+
+      <!-- MOT -->
+      <div class="service-card fade-in">
+        <div class="card-header" onclick="toggleCard(this)">
+            <h3>MOT Testing</h3>
+            <img src="MOT_SIGN.png" alt="MOT symbol" class="mot-icon">
+            <span class="dropdown-icon">▾</span>
+        </div>
+        <div class="card-content">
+            <p> We are a fully certified MOT testing station for Class 4 &amp; Class 7 vehicles. Our thorough inspections ensure your car meets all legal roadworthiness and environmental standards. If any issues are found, we’ll explain them clearly and carry out repairs so you can get back on the road with confidence. </p>
+        </div>
+      </div>
+
+      <!-- Servicing -->
+      <div class="service-card fade-in">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3>Vehicle Servicing</h3>
+          <span class="dropdown-icon">▾</span>
+        </div>
+        <div class="card-content">
+          <p>Regular servicing is essential for keeping your vehicle running smoothly and preventing costly breakdowns. We offer interim and full services, including oil and filter changes, brake checks, and full safety inspections tailored to your vehicle’s needs.</p>
+        </div>
+      </div>
+
+      <!-- Diagnostics -->
+      <div class="service-card fade-in">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3>Diagnostics</h3>
+          <span class="dropdown-icon">▾</span>
+        </div>
+        <div class="card-content">
+          <p>Modern vehicles rely on complex electronic systems. Our advanced diagnostic tools quickly identify faults, saving you time, money, and unnecessary repairs.</p>
+          <p> We offer a wide range of diagnostic services, including:</p>
+          <ul class="list">
+            <li>Engine fault code reading &amp; analysis</li>
+            <li>Warning light diagnostics (check engine, ABS, airbag, etc.)</li>
+            <li>Electrical system testing</li>
+            <li>Battery &amp; charging system checks</li>
+            <li>Sensor &amp; ECU diagnostics</li>
+            <li>Pre-MOT diagnostic checks</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Air Conditioning -->
+      <div class="service-card fade-in">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3>Air Conditioning</h3>
+          <span class="dropdown-icon">▾</span>
+        </div>
+        <div class="card-content">
+          <p> Keep your vehicle cool, comfortable, and efficient with our professional air conditioning services. Whether your system isn’t blowing cold air, has an unpleasant smell, or hasn’t been serviced in a while, our technicians can help. </p>
+          <p> We offer both R-134a and R-1234yf gases. Here is a brief guide to tell which gas your vehicle uses:</p>
+          <ul>
+            <li><strong>R-134a:</strong> Became the standard for vehicles manufactured from 1994 until 2016 to reduce environmental impact. If your vehicle was manufactured between 1994 and 2016 it is likely to use this gas.</li>
+            <li><strong>R-1234yf:</strong> Became the standard for vehicles manufactured after 2016 to reduce environmental impact even further. If your vehicle was manufactured after 2016 it is likley to use this gas.</li>
+          </ul>
+          <p> Why service your air conditioning?</p>
+          <ul>
+            <li> Improves cooling performance </li>
+            <li> Eliminates odours and bacteria </li>
+            <li> Enhances fuel efficiency </li>
+            <li> Extends the lifespan of the overall system </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tyres -->
+      <div class="service-card fade-in">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3>Tyres & Alignment</h3>
+          <span class="dropdown-icon">▾</span>
+        </div>
+        <div class="card-content">
+          <p>Your tyres are the only point of contact between your vehicle and the road, making them critical for safety, handling, and fuel efficiency. Our tyre services ensure you stay safe and in control in all driving conditions.</p>
+          <p>We offer a full range of tyre services, including:</p>
+          <ul>
+            <li>Tyre fitting and replacement</li>
+            <li>Wheel balancing</li>
+            <li>Puncture repairs</li>
+            <li>Tyre pressure checks and adjustments</li>
+            <li>4 wheel laser alignment (tracking)</li>
+          </ul>
+          <p>Why are well-maintained tyres important?</p>
+          <ul>
+            <li>Improves grip and handling</li>
+            <li>Enhances braking performance</li>
+            <li>Increases fuel efficiency</li>
+            <li>Reduces uneven wear and extends tyre life</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Cambelts -->
+      <div class="service-card fade-in">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3>Cambelts & Wet Belts</h3>
+          <span class="dropdown-icon">▾</span>
+        </div>
+        <div class="card-content">
+          <p> Not sure when your cambelt was last changed? It’s one of the most important parts of your engine and one of the easiest to forget. </p>
+          <p> If it fails, it can lead to major (and expensive) damage. That’s why we offer reliable cambelt and wet belt replacements to keep your vehicle running smoothly and avoid unexpected breakdowns. </p>
+          <p> We’ll advise you on the right time to replace it based on your vehicle and mileage. </p>
+        </div>
+      </div>
+
+      <!-- Repairs -->
+      <div class="service-card fade-in">
+        <div class="card-header" onclick="toggleCard(this)">
+          <h3>General Repairs</h3>
+          <span class="dropdown-icon">▾</span>
+        </div>
+        <div class="card-content">
+          <p>From minor fixes to essential maintenance, we provide reliable general repair services to keep your vehicle running safely and smoothly. Our experienced technicians handle a wide range of mechanical and electrical issues.</p>
+          <p>Our general repair services include:</p>
+          <ul>
+            <li>Brake repairs and replacements</li>
+            <li>Suspension and steering repairs</li>
+            <li>Exhaust system repairs</li>
+            <li>Engine servicing and repairs</li>
+            <li>Clutch replacement</li>
+            <li>Fluid checks and top-ups</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <h2>Need something checked?</h2>
+  <a href="contact.html" class="btn-primary">Book Appointment</a>
+</section>
+
+<footer>
+  <p>© 2026 A.B Vehicle Services Ltd. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleCard(header) {
+    const card = header.parentElement;
+    const content = card.querySelector(".card-content");
+
+    const isOpen = card.classList.contains("active");
+
+    if (isOpen) {
+        content.style.maxHeight = content.scrollHeight + "px";
+        requestAnimationFrame(() => {
+            content.style.maxHeight = "0px";
+        });
+        card.classList.remove("active");
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        card.classList.add("active");
+    }
+}
+
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-menu");
+
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>
