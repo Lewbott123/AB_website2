@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - A.B Vehicle Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <div class="nav-container">
+    
+    <div class="logo">
+        <img src="ABlogo.png" alt="A.B Vehicle Services Logo" class="logo-img">
+        <span class="logo-text">A.B Vehicle Services</span>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero small-hero">
+  <div class="hero-bg contact-bg"></div>
+
+  <div class="hero-content fade-in">
+    <h2>Contact Us</h2>
+    <p>Book your vehicle in or get in touch for advice — we’re here to help.</p>
+  </div>
+</section>
+
+<!-- CONTACT CONTENT -->
+<section class="section">
+  <div class="container">
+
+    <div class="grid-2">
+
+      <!-- LEFT: DETAILS -->
+      <div>
+        <h2 class="section-title">Get in Touch</h2>
+
+        <p><strong>Phone:</strong><br>
+        <a href="tel:01283760000" class="contact-link">01283 760000</a></p>
+
+        <p><strong>Email:</strong><br>
+        <a href="mailto:abvehicleservices@mail.com" class="contact-link">
+          abvehicleservices@mail.co.uk
+        </a></p>
+
+        <p><strong>Address:</strong><br>
+        <a href="https://maps.app.goo.gl/Ka225axAVaFx7CKAA" class="contact-link">
+          A.B. Vehicle Services Ltd<br>
+          Seale Lodge Farm<br>
+          Burton Road<br>
+          Acresford<br>
+          DE12 8AP<br>
+        </a></p>
+
+        <p><strong>Opening Hours:</strong><br>
+        Mon – Thur: 8:30am – 5:00pm<br>
+        Fri: 8:30am – 4:00pm<br>
+        Sat: 8:30am – 12:00pm<br>
+        Sun: Closed
+
+        </p>
+      </div>
+
+      <!-- RIGHT: FORM -->
+      <div class="contact-form">
+        <h2 class="section-title">Send a Message</h2>
+
+        <form action="https://formspree.io/f/yourID" method="POST">
+
+          <input type="text" name="name" placeholder="Your Name" required>
+
+          <input type="email" name="email" placeholder="Email Address" required>
+
+          <input type="tel" name="phone" placeholder="Phone Number">
+
+          <textarea name="message" placeholder="How can we help?" rows="5" required></textarea>
+
+          <!-- Optional extras -->
+          <input type="hidden" name="_subject" value="New enquiry from website">
+          <input type="text" name="_gotcha" style="display:none">
+
+          <button type="submit" class="btn-primary">Send Message</button>
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- MAP (optional but recommended) -->
+<section class="section alt">
+  <div class="container">
+    <h2 class="section-title">Find Us</h2>
+
+    <div class="map">
+      <iframe 
+        src="https://www.google.com/maps?q=AB+Vehicle+Services&output=embed"
+        width="100%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-strip">
+  <h2>Give us a call!</h2>
+  <a href="tel:01283760000" class="btn-primary">Call Now</a>
+</section>
+
+<footer>
+  <p>© 2026 A.B Vehicle Services Ltd. All rights reserved.</p>
+</footer>
+
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav-menu");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+</script>
+
+</body>
+</html>
